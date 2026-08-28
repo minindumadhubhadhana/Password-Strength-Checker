@@ -116,15 +116,35 @@ git clone https://github.com/YOUR-USERNAME/Password-Strength-Checker.git
 cd Password-Strength-Checker
 ```
 
-### 3. Install Dependencies
+### 3. Create a Virtual Environment (Recommended)
 
-If the project uses external Python packages:
+Creating a virtual environment keeps the project's Python dependencies isolated from your system Python installation.
+
+**Windows:**
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**Linux/macOS:**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+> The `venv/` folder is a local development environment and should **not** be uploaded to GitHub. It is excluded through `.gitignore`.
+
+### 4. Install Dependencies
+
+Install the packages listed in `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-If no external packages are required, this step can be skipped.
+If `requirements.txt` is empty because the project uses only Python's standard library, no additional packages are required.
 
 ---
 
